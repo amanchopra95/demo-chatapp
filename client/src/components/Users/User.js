@@ -23,16 +23,18 @@ const User = (props) => {
         socket.on('userremoved', (message) => {
             fetchUsers()
         })
-    })
+    }, [])
 
     return (
         <div>
             <h6>Users attending this chat</h6>
-            {
-                users ? users.map((user) => {
-                    return <div key={user.id}>{user.name}</div>
-                }) : null
-            }
+            <ul>
+                {
+                    users ? users.map((user) => {
+                        return <li key={user.id}>{user.name}</li>
+                    }) : null
+                }
+            </ul>
         </div>
     )
 }

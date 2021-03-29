@@ -2,6 +2,7 @@ class UserSchema {
     constructor (user) {
         this.id = user.id,
         this.name = user.name
+        this.message = []
     }
 }
 
@@ -28,6 +29,10 @@ class User {
 
     remove(id) {
         delete this._data[id]
+    }
+
+    addMessage(message) {
+        this._data[message.id].message.push(message)
     }
 }
 

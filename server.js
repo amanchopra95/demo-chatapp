@@ -40,6 +40,10 @@ io.on('connection', socket => {
         'id': socket.id
     })
     socket.emit('message', 'Welcome to chat app')
+
+    socket.on('add message', (message) => {
+        io.emit('message added', message)
+    })
     // socket.broadcast.emit('message', "A user has joined the chat")
 
     // socket.on('set username', (username) => {
