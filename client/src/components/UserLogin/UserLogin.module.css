@@ -1,0 +1,13 @@
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap:wrap;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.flex input,
+.flex select {
+    margin: 1rem;
+}

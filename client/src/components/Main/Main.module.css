@@ -1,0 +1,30 @@
+.main {
+    display: grid;
+    grid-template-areas: 
+        'header header header'
+        'aside chatbox chatbox'
+        'aside footer footer';
+    padding: 15px;
+}
+
+.header {
+    grid-area: header;
+    justify-self: center;
+}
+
+.aside {
+    grid-area: aside;
+    background-color: #4545;
+}
+
+.section {
+    grid-area: chatbox;
+    background-color: #454545;
+    color: #fff;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #333;
+    color: #fff;
+}
